@@ -1,3 +1,4 @@
+
 import re
 
 # Assignment 8 Part I
@@ -54,8 +55,8 @@ if __name__ == "__main__":
 
     print("<<<<< Hashtag Problem >>>>>\n")
     # uncomment the following prints to see results and asserts to test
-    # print(f"hashtags are: {mats}") # should be ['cs', 'python', 'LT', 'champions']"
-    # assert mats == ['cs', 'python', 'LT', 'champions'], "Incorrect hashtags"
+    # print(f"hashtags are: {hashtag_matches}") # should be ['cs', 'python', 'LT', 'champions']"
+    # assert hashtag_matches == ['cs', 'python', 'LT', 'champions'], "Incorrect hashtags"
     # print('\n<<<< Hashtag extraction tests passed >>>>\n')
 
     # print('\n<<<< All tests passed! >>>>')
