@@ -9,21 +9,31 @@ import re
 # should extract a match where the first group is the month, the second group the day
 # and the third group the year
 date_string = "November 9, 1982"
-pat = re.compile("REPLACE ME", re.IGNORECASE)
+pat = re.compile("(november) (9), (1982)", re.IGNORECASE)
 date_matches = pat.match(date_string)
+print(date_matches)
+print(date_matches.groups())
+
 
 # problem 2
 # should extract a match where the first group is the number, the second the street, the
 # third the city, the fourth the state and the fifth the zip code
 address_string = "2501 Addison Street\nChicago, IL 60618"
-pat = re.compile("REPLACE ME", re.IGNORECASE)
+pat = re.compile("/(?P<number>\d\d\d\d\s{0,3}) (?P<street>\w+\s\w+)\n(?P<city>\w+), (?P<state>\w\w) (?P<zipcode>\d\d\d\d\d)/gm", re.IGNORECASE)
 address_matches = pat.match(address_string)
+print(address_matches.group("number"))
+print(address_matches.group("street"))
+print(address_matches.group("city"))
+print(address_matches.group("state"))
+print(address_matches.group("zipcode"))
 
 # problem 3
 # should match all hashtags
 tweet_string = "hi everyone! #cs #python #LT #champions"
-pat = re.compile("REPLACE ME", re.IGNORECASE)
+pat = re.compile("#\w+", re.IGNORECASE)
 hashtag_matches = pat.findall(tweet_string)
+print(hashtag_matches)
+# print(hashtag_matches.groups())
 
 # until you uncomment any code line below you'll get an EOF linting error feel free to
 # ignore it
